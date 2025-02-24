@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+    <style>
+        .comment {
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: lightcyan;
+
+        }
+
+        h3 {
+            font: bold;
+            font-size: 2rem;
+            color: violet;
+            margin: 10px;
+        }
+
+        #post-comment {
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: large;
+            position: relative;
+            left: 260px;
+
+        }
+
+        #container {
+            width: 400px;
+
+        }
+
+        #text-field {
+            border-radius: 10px;
+            border: 2px solid red;
+            resize: none;
+            margin: 10px;
+            outline: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My awesome comment box.Write what in your mind!!</h1>
+    <section>
+        <h3>All cmments here</h3>
+        <div id="comment-container">
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam aliquid unde assumenda
+                quasi consequatur et deleniti impedit harum mollitia vero nobis molestias nostrum perspiciatis, eaque
+                placeat? Sapiente, sed necessitatibus.</p>
+            <p class="comment">Nam vel nobis eius suscipit magni aliquid quasi neque, ab omnis est! Modi architecto amet
+                est provident ducimus numquam mollitia, commodi totam. Placeat facilis vero labore aspernatur odit?
+                Nostrum, ad!</p>
+            <p class="comment">Numquam, porro ipsa totam ipsam consectetur sed tempore eligendi vel. Porro ab nostrum
+                incidunt, ratione quo molestias ut blanditiis minima quod eveniet consectetur temporibus voluptatem fuga
+                delectus nisi? Perspiciatis, culpa?</p>
+        </div>
+
+        
+    </section>
+
+    <div id="container">
+        <textarea name="" id="text-field" cols="50" rows="10"></textarea>
+        <br>
+        <button id="post-comment">post comment</button>
+    </div>
+
+    <script>
+        // step 1:set an event handler to the button
+        const postComment = document.getElementById('post-comment')
+            .addEventListener('click', function () {
+
+                // step 2: get the text written in the comment text area
+                const textField = document.getElementById('text-field');
+                const textFieldValue = textField.value;
+
+                // step 3: get the parent node where to pusblish comment
+                const commentContainer = document.getElementById('comment-container');
+                // step 4: creat a comment p and set the innertext
+                const p = document.createElement('p');
+                p.classList.add('comment')
+                p.innerText = textFieldValue;
+                // step 5: append the new p tag to the parent node
+                commentContainer.appendChild(p)
+
+                // step 6: clean the text area
+                textField.value = ''
+            })
+    </script>
+</body>
+
+</html>
