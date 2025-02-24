@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Events</title>
+    <style>
+        body{
+            border: 2px solid red;
+            margin: 5px;
+            padding: 7px;
+        }
+        section{
+            border: 2px solid green;
+            margin: 5px;
+            padding: 7px;
+        }
+        ol{
+            border: 2px solid purple;
+            margin: 5px;
+            padding: 7px;
+        }
+        li{
+            border: 2px solid blue;
+            margin: 15px;
+            padding: 7px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Explore Event bubble</h1>
+    <section id="section-container">
+        <h2>List of things</h2>
+        <ol id="list-container">
+            <li id="itme-1">Lorem, ipsum.</li>
+            <li id="itme-2">Excepturi, nesciunt.</li>
+            <li id="itme-3">Vel, recusandae.</li>
+            <li id="itme-4">Quod, qui?</li>
+            <li id="itme-5">Modi, voluptates?</li>
+            <li id="itme-6">Aperiam, velit.</li>
+        </ol>
+    </section>
+
+    <script>
+         
+        // list  item 2 click handler 
+        document.getElementById('itme-2')
+        .addEventListener('click', function(event){
+            console.log('item 2 clicked');
+            // event.stopPropagation()
+            event.stopImmediatePropagation()
+        })
+
+        // list container click handler 
+        document.getElementById('list-container')
+        .addEventListener('click', function(){
+            console.log('list container clicked');
+        })
+        // section container click handler 
+        document.getElementById('section-container')
+        .addEventListener('click', function(){
+            console.log('section container clicked');
+        })
+        // body click handler 
+        document.getElementById('body')
+        .addEventListener('click', function(){
+            console.log('body clicked');
+        })
+
+    </script>
+</body>
+</html>
