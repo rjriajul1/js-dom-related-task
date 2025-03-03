@@ -43,8 +43,9 @@
 
         const titleUpdate = document.getElementById('btn-title-update')
             .addEventListener('click', function () {
-
+             
                 const h1 = document.querySelector('h1')
+
                 h1.innerText = 'Iam text Handler so  update text you are do not mind';
             })
 
@@ -63,10 +64,10 @@
 
         const btnUpdate = document.getElementById('btn-update')
             .addEventListener('click', function () {
+                
                 const inputField = document.getElementById('input-field');
                 const newElementValue = inputField.value;
-
-
+               
                 const titleName = document.getElementById('title-name');
 
                 titleName.style.fontSize = '40px'
@@ -75,9 +76,6 @@
                 titleName.innerText = newElementValue;
 
                 inputField.value = ''
-
-
-
 
 
             })

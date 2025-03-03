@@ -5,9 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Delegate</title>
+
+    <style>
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 200px;
+            /* Set a fixed width */
+        }
+        
+
+        #item-list .item{
+            background-color: cyan;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            width: max-content;
+            font-weight: bold;
+
+        }
+    </style>
 </head>
 
 <body>
+
+    <!-- ellipsis using -->
+    <p title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eligendi provident porro quasi rerum velit atque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eligendi provident porro quasi rerum velit atque
+    </p>
+    <!-- ellipisis using -->
     <h1>Explore Delegate Event</h1>
     <section>
         <ol id="item-list">
@@ -41,7 +67,8 @@
                 const listItem = document.getElementById('item-list');
 
                 const li = document.createElement('li');
-                li.innerText = "Brand new item";
+                li.classList.add("item")
+                li.innerText = "Brand new item added";
 
                 listItem.appendChild(li)
 
