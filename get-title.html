@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+
+        :root{
+            --pramery-opacity:20px;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 10px;
+        }
+        .card{
+            background-color: slategray ;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        .sub-title{
+            background-color: white;
+            width: max-content;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .discription{
+            background-color: white;
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+        .btn{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .blur-btn {
+            /* filter:grayscale(50%); */
+            /* filter: blur(5px); */
+            /* filter: hue-rotate(120deg); */
+            filter: opacity(40%);
+            /* Apply blur effect */
+          pointer-events:none; /* Prevent clicking */
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+       
+        <!-- one cart -->
+        <div class="card">
+            <p class="sub-title">ShopEase</p>
+             <h1>Fix Mobile Button Issue </h1>
+             <p class="discription">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                and ensure onClick works properly</p>
+                <p>Dateline</p>
+                <div class="btn-container">
+                    
+                <data value="21 March 2025">21 March 2025</data>
+                <button onclick="getCartTitle(this)" class="btn">Completed</button>
+                </div>
+        </div>
+
+         <!-- two cart -->
+        <div class="card">
+            <p class="sub-title">CloudSync</p>
+             <h1>Add Dark Mode</h1>
+             <p class="discription">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                and ensure onClick works properly</p>
+                <p>Dateline</p>
+                <div class="btn-container">
+                    
+                <data value="21 March 2025">21 March 2025</data>
+                <button onclick="getCartTitle(this)" class="btn">Completed</button>
+                </div>
+        </div>
+
+        <!-- three cart  -->
+        <div class="card">
+            <p class="sub-title">SwiftPay</p>
+             <h1>Optimize  Home page</h1>
+             <p class="discription">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                and ensure onClick works properly</p>
+                <p>Dateline</p>
+                <div class="btn-container">
+                    
+                <data value="21 March 2025">21 March 2025</data>
+                <button onclick="getCartTitle(this)" class="btn">Completed</button>
+                </div>
+        </div>
+        <!-- four cart -->
+        <div class="card">
+            <p class="sub-title">Meta</p>
+             <h1>Add new emoji 🤲</h1>
+             <p class="discription">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                and ensure onClick works properly</p>
+                <p>Dateline</p>
+                <div class="btn-container">
+                    
+                <data value="21 March 2025">21 March 2025</data>
+                <button onclick="getCartTitle(this)" class="btn">Completed</button>
+                </div>
+        </div>
+
+        <!-- five cart -->
+        <div class="card">
+            <p class="sub-title">Google LLC</p>
+             <h1>Integrate OpenAI API  </h1>
+             <p class="discription">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                and ensure onClick works properly</p>
+                <p>Dateline</p>
+                <div class="btn-container">
+                    
+                <data value="21 March 2025">21 March 2025</data>
+                <button onclick="getCartTitle(this)" class="btn">Completed</button>
+                </div>
+        </div>
+
+        <!-- six cart -->
+        <div class="card">
+            <p class="sub-title">Glassdoar</p>
+             <h1>Improve Job searching </h1>
+             <p class="discription">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                and ensure onClick works properly</p>
+                <p>Dateline</p>
+                <div class="btn-container">
+                    
+                <data value="21 March 2025">21 March 2025</data>
+                <button onclick="getCartTitle(this)" class="btn">Completed</button>
+                </div>
+        </div>
+    </div>
+
+    <div id="another-container">
+       
+    </div>
+
+ <script>
+     function getCartTitle(e){
+        const title = e.parentNode.parentNode.childNodes[3].innerText;
+         alert("board successfully")
+         
+         const anotherContainer = document.getElementById('another-container');
+         
+         const p = document.createElement('p');
+         p.innerText = title;
+    
+         anotherContainer.appendChild(p)
+
+        e.classList.add('blur-btn')
+          
+
+
+        
+     }
+ </script>
+</body>
+</html>
+
